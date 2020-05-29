@@ -2,14 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
 
 
-export default function Card() {
+export default function Card(props) {
     return (
         <View style={styles.card}>
             <Image style={styles.picture} 
-            source={{uri: "https://i.insider.com/5e84a14392e191478763ef84?width=1100&format=jpeg&auto=webp"}} />
+            source={{uri: props.picture}} />
             <View style={styles.info}>
-                <Text style={styles.name}>Colton Underwood <Text style={styles.highlight}>23</Text></Text>
-                <Text style={styles.bio}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas.</Text>
+                <Text style={styles.name}>{props.name} <Text style={styles.highlight}>{props.age}</Text></Text>
+                <Text style={styles.bio}>{props.bio}</Text>
             </View>
         </View>
     )
@@ -17,7 +17,7 @@ export default function Card() {
 
 const styles = StyleSheet.create({
     card: {
-        marginVertical: 8,
+        marginVertical: 16,
         flexDirection: 'row',
         padding: 16,
         borderRadius: 16,
@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 18,
         fontWeight: 'bold',
-        textAlign: 'right'
+        textAlign: 'right',
+        color: '#333'
     },
 
     highlight: {

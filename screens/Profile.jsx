@@ -3,9 +3,6 @@ import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function Profile() {
   return (
-    // First coding video - Building profile
-    // Second coding video - Building initial discover screen
-    // Third coding video - Using components
     <SafeAreaView style={styles.safe}>
       <View style={styles.container}>
         <Text style={styles.header}>AJ Underwood</Text>

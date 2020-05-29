@@ -6,7 +6,11 @@ import Discover from './screens/Discover.jsx';
 
 export default function App() {
   return (
-    // First coding video
+    // First coding video - Building profile (everything basic about react native)
+    // Second coding video - Building initial discover screen (similar but with views)
+    // Third coding video - Using components (building reusable components)
+    // Fourth coding video - Loading components from data (loading components from data)
+    // Fifth coding video - React navigation (setting it up and integrating it)
     <>
       {/* <Profile></Profile> */}
       <Discover></Discover>
