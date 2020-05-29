@@ -1,23 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import * as Linking from 'expo-linking'
 
 
 export default function Card(props) {
+
+    const emailSetup = (email) => {
+        Linking.openURL('mailto:hyw2@cornell.edu');
+    }
+
     return (
-        <View style={styles.card}>
-            <Image style={styles.picture} 
-            source={{uri: props.picture}} />
-            <View style={styles.info}>
-                <Text style={styles.name}>{props.name} <Text style={styles.highlight}>{props.age}</Text></Text>
-                <Text style={styles.bio}>{props.bio}</Text>
+        <TouchableOpacity onPress={() => emailSetup(props.email)}>
+            <View style={styles.card}>
+                <Image style={styles.picture} 
+                source={{uri: props.picture}} />
+                <View style={styles.info}>
+                    <Text style={styles.name}>{props.name} <Text style={styles.highlight}>{props.age}</Text></Text>
+                    <Text style={styles.bio}>{props.bio}</Text>
+                </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        marginVertical: 16,
+        marginVertical: 8,
         flexDirection: 'row',
         padding: 16,
         borderRadius: 16,

@@ -9,6 +9,9 @@ export default function Profile() {
         <Text style={styles.subHeader}>Age: 23</Text>
         <Text style={styles.description}>Hello! My name is Microsoft. Can I crash at your place tonight?</Text>
         <Image style={styles.picture} source={{uri: "https://i.insider.com/5e84a14392e191478763ef84?width=1100&format=jpeg&auto=webp"}} />
+        <View style={styles.button}>
+            <Text style={styles.buttonText}>Logout</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -46,5 +49,21 @@ const styles = StyleSheet.create({
     marginTop: 16,
     height: 234,
     borderRadius: 24
+  },
+
+  button: {
+      marginTop: 24,
+      width: '100%',
+      backgroundColor: '#FF6767',
+      alignSelf: 'center',
+      alignItems: 'center',
+      borderRadius: 8,
+      paddingVertical: 4
+  },
+
+  buttonText: {
+      color: '#FFF',
+      fontSize: 20,
+      fontWeight: 'bold'
   }
 });

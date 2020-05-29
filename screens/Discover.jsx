@@ -1,23 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, SafeAreaView,  ScrollView } from 'react-native';
 
 import Card from './Card';
 
 export default function Discover() {
     const profiles = [
         {
+            email: "hotguy@dude.com",
             picture: "https://i.insider.com/5e84a14392e191478763ef84?width=1100&format=jpeg&auto=webp",
             name: "Colton Underwood",
             age: 23,
             bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas."
         },
         {
+            email: "hotguy2@dude.com",
             picture: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nickviall-89747516-251757629322778-1879807299067145470-n-1586800462.jpg",
             name: "Nick Viall",
             age: 22,
             bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas."
         },
         {
+            email: "hotguy3@dude.com",
             picture: "https://media4.s-nbcnews.com/j/streams/2013/March/130314/1C6440809-tdy-130312-sean-lowe.fit-760w.jpg",
             name: "Sean Lowe",
             age: 24,
@@ -33,6 +36,7 @@ export default function Discover() {
                     profiles.map((profile, i) => 
                         <Card 
                             key={i}
+                            email={profile.email}
                             picture={profile.picture}
                             name={profile.name}
                             age={profile.age}
